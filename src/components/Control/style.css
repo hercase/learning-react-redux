@@ -5,7 +5,8 @@
     align-items: center;
     display: flex;
     height: 5rem;
-    width: 50%;
+	width: 50%;
+	flex: 5;
 }
 
 .title {
