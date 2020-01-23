@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import Page from './page';
 
-function Results(props) {
+function Results() {
     return(
         <Page />
     );

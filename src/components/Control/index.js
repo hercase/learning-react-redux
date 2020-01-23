@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { incrVAL } from '../../redux/actions/actions'
+import { incrVal, decrVal } from '../../redux/actions/actions'
 import './style.css'
 
 function Control (props) {
@@ -10,11 +10,19 @@ function Control (props) {
                 Test Redux
             </div>
             <div className='buttons'>
-            <a href='#' className='button'>+</a>
-            <a href='#' className='button'>-</a>
+            <button onClick={() => props.incrVal()} className='button'>+</button>
+            <button onClick={() => props.decrVal()} className='button'>-</button>
             </div>
         </div>
     );
 }
 
-export default Control;
+const mapStateToProps = state => {
+    return {
+      contador: state,
+    };
+  };
+  
+  export default connect(mapStateToProps,
+    { incrVal, decrVal },
+    )(Control);

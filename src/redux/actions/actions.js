@@ -1,17 +1,17 @@
-import { INCR_VAL, DECR_VAL } from './actionTypes';
+import { INCR_VAL, DECR_VAL } from './actionTypes'
 
-let contador = 0;
+export function incrVal(){
+    return( 
+        { 
+            type: INCR_VAL,
+         }
+    );
+};
 
-export const incrVAL = contador => ({
-    type: INCR_VAL,
-    payload: {
-        value: ++contador
-    }
-})
-
-export const decrVAL = contador => ({
-    type: DECR_VAL,
-    payload: {
-        value: --contador
-    }
-})
+export function decrVal(){
+    return( 
+        { 
+            type: DECR_VAL,  
+         }
+    );
+};

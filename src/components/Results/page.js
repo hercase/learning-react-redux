@@ -1,12 +1,19 @@
 import React from 'react';
+import { connect } from "react-redux";
 import './style.css';
 
-function Page(props) {
+function Results(objeto) {
     return(
         <div className='results'>
-            1
+            { objeto.value }
         </div>
     );
-}
+};
+
+const mapStateToProps = state => {
+    return { value: state.contador };
+};
+
+const Page = connect(mapStateToProps)(Results);
 
 export default Page;
