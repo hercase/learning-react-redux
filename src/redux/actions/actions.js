@@ -11,7 +11,7 @@ export function incrVal(){
 export function decrVal(){
     return( 
         { 
-            type: DECR_VAL,  
+            type: DECR_VAL,
          }
     );
 };

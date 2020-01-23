@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { incrVal, decrVal } from '../../redux/actions/actions'
+import { incrVal, decrVal } from '../../../redux/actions/actions'
 import './style.css'
 
 function Control (props) {
     return (
         <div className='control'>
             <div className='title'>
-                Test Redux
+                Counter Example
             </div>
             <div className='buttons'>
             <button onClick={() => props.incrVal()} className='button'>+</button>
