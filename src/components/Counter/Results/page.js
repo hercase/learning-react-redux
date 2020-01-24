@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-function Results(objeto) {
+const Results = props => {
     return(
         <div className='results'>
-            { objeto.value }
+            { props.value.counter }
         </div>
     );
 };
 
 const mapStateToProps = state => {
-    return { value: state.contador };
+    return { value: state.counterReducer };
 };
 
 const Page = connect(mapStateToProps)(Results);

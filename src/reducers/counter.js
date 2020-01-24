@@ -1,22 +1,22 @@
 import { INCR_VAL, DECR_VAL } from '../actions/actionTypes';
 
 const initialState = {
-    contador : 0
+    counter : 0
 };
 
-export function Contador(state = initialState, action) {
+const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCR_VAL:
     return {
-        contador: state.contador + 1
+        counter: state.counter + 1
       }
     case DECR_VAL:
       return {
-        contador: state.contador - 1
+        counter: state.counter - 1
       }
     default:
       return state
   }
-}
+};
 
-export default Contador;
+export default counterReducer;

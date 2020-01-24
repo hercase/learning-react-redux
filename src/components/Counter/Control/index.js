@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { incrVal, decrVal } from '../../../redux/actions/actions'
+import { incrVal, decrVal } from '../../../actions/actions'
 import './style.css'
 
 function Control (props) {

@@ -3,8 +3,9 @@ import React from 'react';
 import './App.css';
 import Control from './components/Counter/Control/index'
 import Results from './components/Counter/Results';
-import Posts from './components/Posts';
+import AddPosts from './components/Posts/AddPosts';
 import Header from './components/header';
+import ListPosts from './components/Posts/ListPosts';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Header />
         <Control />
         <Results />
-        <Posts />
+        <AddPosts />
+        <ListPosts />
       </div>
     </div>
   );
