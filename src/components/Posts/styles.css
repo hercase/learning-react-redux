@@ -1,0 +1,62 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+        "title title display"
+        "text text ."
+        "add reset . "
+    ;
+    grid-gap: 0.2rem;
+}
+
+.post-title {
+    grid-area: title;
+}
+
+.post-text {
+    grid-area: text;
+    min-height: 80px;
+}
+
+.post-add {
+    color: white;
+    background-color: #95a5a6;
+    grid-area: add;
+    color: white;
+    background-color: #2ecc71;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    padding: 6px 24px;
+    text-decoration: none;
+    margin-right: 0.2rem;
+    width: 150px;
+}
+
+.post-display {
+    color: white;
+    grid-area: display;
+    background-color: #2980b9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    padding: 6px 24px;
+    text-decoration: none;
+    margin-right: 0.2rem;
+    width: 150px;
+}
+
+.post-reset {
+    color: white;
+    background-color: #95a5a6;
+    grid-area: reset;
+    color: white;
+    background-color: #bdc3c7;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    padding: 6px 24px;
+    text-decoration: none;
+    margin-right: 0.2rem;
+    width: 150px;
+}
