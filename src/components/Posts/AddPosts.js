@@ -44,7 +44,7 @@ function AddPosts(props){
                 <input placeholder='Body' type="text-area" name="body" className="post-text" onChange={ handleInputChange }/>
                 <div className='add-reset-buttons'> 
                 <button className="post-add btn btn-success mr-1" type="submit">Add Post</button>
-                <button className="post-reset btn btn-secondary" type='reset' onClick={ () =>  {console.log(props.posts.pop());}  }>Reset</button>
+                <button className="post-reset btn btn-secondary" type='reset'>Reset</button>
                 </div>
                 {/* <button className="post-display btn btn-primary">Display Posts</button> */}
             </form>
