@@ -6,14 +6,16 @@ import './styles.css'
 function AddPosts(props){
 
     const [ Form, setForm ] = useState();
+    const [ Alert, setAlert ] = useState(false);
 
     const handleInputChange = e => {
         setForm({ ...Form, [e.target.name]: e.target.value})
+        setAlert(false);
     };
     
     const handleSubmit = e => {
         e.preventDefault();
-        if ( Form.title && Form.body ){
+        if ( Form ){
             let data = {};
             let index = props.posts.length;
             if (!index) {
@@ -31,7 +33,7 @@ function AddPosts(props){
             }
             props.addPost(data);
         } else {
-            console.log('Falta completar un campo.')
+            setAlert(true);
         }
     };
 
@@ -44,8 +46,9 @@ function AddPosts(props){
                 <button className="post-add btn btn-success mr-1" type="submit">Add Post</button>
                 <button className="post-reset btn btn-secondary" type='reset' onClick={ () =>  {console.log(props.posts.pop());}  }>Reset</button>
                 </div>
-                <button className="post-display btn btn-primary">Display Posts</button>
+                {/* <button className="post-display btn btn-primary">Display Posts</button> */}
             </form>
+            { Alert && <div className="alert alert-danger m-3 small" role="alert"> Debe ingresar un titulo y un mensaje.</div> }
         </div>
     );
 }
