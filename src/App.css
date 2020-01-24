@@ -13,7 +13,7 @@
     grid-template-areas: 
         "header header"
         "control results"
-        "posts posts";
+        "posts .";
 }
 
 @media (max-width: 600px) {
@@ -48,7 +48,6 @@
 .posts {
     grid-area: posts;
     background: white;
-    padding: 2rem;
 }
 
 .title {
